@@ -1014,6 +1014,14 @@ main {
   font-weight: var(--fw-300);
 }
 
+.project-img video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+
 
 
 
