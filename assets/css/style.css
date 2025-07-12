@@ -1778,3 +1778,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 
+@media (min-width: 768px) {
+  .events .event-posts-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .events .event-posts-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
