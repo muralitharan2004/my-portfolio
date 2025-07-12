@@ -482,7 +482,7 @@
               </div>
             </li>
 
-             
+           
 
         </section>
         <br>
@@ -641,6 +641,10 @@
         - #PORTFOLIO
       -->
 
+<!-- ===========================
+ ✅ Portfolio Section with Filter
+============================ -->
+
 <article class="portfolio" data-page="portfolio">
 
   <header>
@@ -649,21 +653,23 @@
 
   <section class="projects">
 
+    <!-- Filter buttons for desktop -->
     <ul class="filter-list">
       <li class="filter-item">
-        <button class="active" data-filter-btn>All</button>
+        <button class="active" data-filter="all">All</button>
       </li>
       <li class="filter-item">
-        <button data-filter-btn>UI/UX</button>
+        <button data-filter="uiux">UI/UX</button>
       </li>
       <li class="filter-item">
-        <button data-filter-btn>Web Design</button>
+        <button data-filter="webdesign">Web Design</button>
       </li>
       <li class="filter-item">
-        <button data-filter-btn>AI/ML</button>
+        <button data-filter="aiml">AI/ML</button>
       </li>
     </ul>
 
+    <!-- Filter dropdown for mobile -->
     <div class="filter-select-box">
       <button class="filter-select" data-select>
         <div class="select-value" data-select-value>Select category</div>
@@ -674,49 +680,60 @@
 
       <ul class="select-list">
         <li class="select-item">
-          <button data-select-item>All</button>
+          <button data-filter="all">All</button>
         </li>
         <li class="select-item">
-          <button data-select-item>UI/UX</button>
+          <button data-filter="uiux">UI/UX</button>
         </li>
         <li class="select-item">
-          <button data-select-item>Web Design</button>
+          <button data-filter="webdesign">Web Design</button>
         </li>
         <li class="select-item">
-          <button data-select-item>AI/ML</button>
+          <button data-filter="aiml">AI/ML</button>
         </li>
       </ul>
     </div>
 
+    <!-- Projects Grid -->
     <ul class="project-list">
 
-      <li class="project-item active" data-filter-item data-category="uiux">
+      <li class="project-item" data-category="uiux">
         <a href="#">
           <figure class="project-img">
-            <video src="./assets/images/design 1 apple.mp4" width="400" controls autoplay muted></video>
+            <video src="./assets/images/design1-apple.mp4" controls autoplay muted></video>
           </figure>
           <h3 class="project-title">Apple Store Design</h3>
           <p class="project-category">UI/UX</p>
         </a>
       </li>
 
-      <li class="project-item active" data-filter-item data-category="uiux">
+      <li class="project-item" data-category="uiux">
         <a href="#">
           <figure class="project-img">
-            <video src="./assets/images/kodaiparadise bookdesign - Made with Clipchamp.mp4" width="400" controls autoplay muted></video>
+            <video src="./assets/images/kodaiparadise-bookdesign.mp4" controls autoplay muted></video>
           </figure>
           <h3 class="project-title">Kodai Paradise Stay Booking</h3>
           <p class="project-category">UI/UX</p>
         </a>
       </li>
 
-      <li class="project-item active" data-filter-item data-category="uiux">
+      <li class="project-item" data-category="webdesign">
         <a href="#">
           <figure class="project-img">
-            <video src="./assets/images/FREELANCER HOMEPAGE DESIGN - Made with Clipchamp.mp4" width="400" controls autoplay muted></video>
+            <img src="./assets/images/webdesign-example.jpg" alt="Web Design">
           </figure>
-          <h3 class="project-title">Freelancer Inn</h3>
-          <p class="project-category">UI/UX</p>
+          <h3 class="project-title">Business Website</h3>
+          <p class="project-category">Web Design</p>
+        </a>
+      </li>
+
+      <li class="project-item" data-category="aiml">
+        <a href="#">
+          <figure class="project-img">
+            <img src="./assets/images/aiml-project.jpg" alt="AI Project">
+          </figure>
+          <h3 class="project-title">AI/ML Research Demo</h3>
+          <p class="project-category">AI/ML</p>
         </a>
       </li>
 
@@ -725,6 +742,7 @@
   </section>
 
 </article>
+
 
       <!--
         - #BLOG
