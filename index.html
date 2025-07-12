@@ -694,54 +694,125 @@
       </ul>
     </div>
 
-    <!-- Projects Grid -->
-    <ul class="project-list">
+    <!--
+        - #PORTFOLIO
+      -->
 
-      <li class="project-item" data-category="uiux">
-        <a href="#">
-          <figure class="project-img">
-            <video src="./assets/images/design1-apple.mp4" controls autoplay muted></video>
-          </figure>
-          <h3 class="project-title">Apple Store Design</h3>
-          <p class="project-category">UI/UX</p>
-        </a>
-      </li>
+      <article class="portfolio" data-page="portfolio">
 
-      <li class="project-item" data-category="uiux">
-        <a href="#">
-          <figure class="project-img">
-            <video src="./assets/images/kodaiparadise-bookdesign.mp4" controls autoplay muted></video>
-          </figure>
-          <h3 class="project-title">Kodai Paradise Stay Booking</h3>
-          <p class="project-category">UI/UX</p>
-        </a>
-      </li>
+        <header>
+          <h2 class="h2 article-title">My Projects</h2>
+        </header>
 
-      <li class="project-item" data-category="webdesign">
-        <a href="#">
-          <figure class="project-img">
-            <img src="./assets/images/webdesign-example.jpg" alt="Web Design">
-          </figure>
-          <h3 class="project-title">Business Website</h3>
-          <p class="project-category">Web Design</p>
-        </a>
-      </li>
+        <section class="projects">
 
-      <li class="project-item" data-category="aiml">
-        <a href="#">
-          <figure class="project-img">
-            <img src="./assets/images/aiml-project.jpg" alt="AI Project">
-          </figure>
-          <h3 class="project-title">AI/ML Research Demo</h3>
-          <p class="project-category">AI/ML</p>
-        </a>
-      </li>
+          <ul class="filter-list">
 
-    </ul>
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
 
-  </section>
+            <li class="filter-item">
+              <button class="active" data-filter-btn>UI/UX</button>
+            </li>
 
-</article>
+            <li class="filter-item">
+              <button class="active" data-filter-btn>WEB DESIGN</button>
+            </li>
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>AI&ML</button>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>UI/UX</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>WEB DESIGN</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>AI/ML</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="ui/ux">
+              <a href="#">
+
+                <figure class="project-img">
+                  
+
+                  <video src="./assets/images/design 1 apple.mp4" alt="finance" loading="" width="400" height="auto " controls autoplay muted>
+                </figure>
+
+                <h3 class="project-title">apple store design</h3>
+
+                <p class="project-category">UI/UX</p>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ui/ux">
+              <a href="#">
+
+                <figure class="project-img">
+                  
+
+                  <video src="./assets/images/kodaiparadise bookdesign - Made with Clipchamp.mp4" alt="finance" loading="" width="400" height="auto " controls autoplay muted>
+                </figure>
+
+                <h3 class="project-title">KODAI PARADISE STAY BOOKING</h3>
+
+                <p class="project-category">UI/UX</p>
+
+              </a>
+            </li>
+            <br>
+
+            <li class="project-item  active" data-filter-item data-category="ui/ux">
+              <a href="#">
+
+                <figure class="project-img">
+
+                  <video src="./assets/images/FREELANCER HOMEPAGE DESIGN - Made with Clipchamp.mp4" alt="finance" loading="" width="350" height="auto " controls autoplay muted>
+                </figure>
+
+                <h3 class="project-title">FREELANCER INN</h3>
+
+                <p class="project-category">UI/UX</p>
+
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
 
 
       <!--
