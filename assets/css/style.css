@@ -1922,6 +1922,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* EVENTS SECTION STYLES */
 
+/* EVENTS SECTION STYLES */
+
 .events .event-posts-list {
   display: grid;
   gap: 30px;
@@ -1986,4 +1988,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 .event-text {
   color: #ccc;
   line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .events .event-posts-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .events .event-posts-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
