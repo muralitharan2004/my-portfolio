@@ -158,25 +158,4 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-<script>
-  const filterBtns = document.querySelectorAll('[data-filter]');
-  const projectItems = document.querySelectorAll('.project-item');
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // remove active from all
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-      projectItems.forEach(item => {
-        const category = item.getAttribute('data-category');
-        if (filter === 'all' || filter === category) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
