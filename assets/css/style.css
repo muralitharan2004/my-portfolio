@@ -1506,6 +1506,49 @@ textarea.form-input::-webkit-resizer { display: none; }
   .blog-posts-list { gap: 30px; }
 
   .blog-content { padding: 25px; }
+/* Round corners for images */
+.project-img,
+.blog-banner-box {
+  border-radius: 16px;
+  overflow: hidden; /* Makes sure border radius clips the image/video properly */
+}
+
+/* Spacing between events */
+.blog-posts-list {
+  display: grid;
+  gap: 30px;
+  list-style: none; /* Removes default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+/* Inner content spacing */
+.blog-content {
+  padding: 25px;
+  background-color: #1c1c1e; /* Optional: dark card look */
+  border-radius: 0 0 16px 16px; /* If you want the content box rounded to match */
+}
+
+/* Make images/videos full width */
+.blog-banner-box img,
+.blog-banner-box video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optional: add shadow for a card effect */
+.blog-post-item {
+  background: #2a2a2e; /* Card background */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.blog-post-item:hover {
+  transform: translateY(-5px);
+}
 
 
 
