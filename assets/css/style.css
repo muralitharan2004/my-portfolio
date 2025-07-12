@@ -301,8 +301,8 @@ main {
 \*-----------------------------------*/
 
 .sidebar {
-  margin-bottom: 35px;
-  max-height: 150px;
+  margin-bottom: 15px;
+  max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -1014,14 +1014,6 @@ main {
   font-weight: var(--fw-300);
 }
 
-.project-img video {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-}
-
-
 
 
 
@@ -1506,49 +1498,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .blog-posts-list { gap: 30px; }
 
   .blog-content { padding: 25px; }
-/* Round corners for images */
-.project-img,
-.blog-banner-box {
-  border-radius: 16px;
-  overflow: hidden; /* Makes sure border radius clips the image/video properly */
-}
-
-/* Spacing between events */
-.blog-posts-list {
-  display: grid;
-  gap: 30px;
-  list-style: none; /* Removes default bullets */
-  padding: 0;
-  margin: 0;
-}
-
-/* Inner content spacing */
-.blog-content {
-  padding: 25px;
-  background-color: #1c1c1e; /* Optional: dark card look */
-  border-radius: 0 0 16px 16px; /* If you want the content box rounded to match */
-}
-
-/* Make images/videos full width */
-.blog-banner-box img,
-.blog-banner-box video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Optional: add shadow for a card effect */
-.blog-post-item {
-  background: #2a2a2e; /* Card background */
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.blog-post-item:hover {
-  transform: translateY(-5px);
-}
 
 
 
@@ -1918,191 +1867,3 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
-
-
-/* EVENTS SECTION STYLES */
-
-/* EVENTS SECTION STYLES */
-
-.events .event-posts-list {
-  display: grid;
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.event-post-item {
-  background: #2a2a2e;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.event-post-item:hover {
-  transform: translateY(-5px);
-}
-
-.event-banner-box {
-  border-radius: 16px 16px 0 0;
-  overflow: hidden;
-}
-
-.event-banner-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.event-content {
-  padding: 25px;
-}
-
-.event-meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-.event-category {
-  font-weight: bold;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  background: #aaa;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.event-item-title {
-  margin: 15px 0 10px 0;
-  font-size: 1.2rem;
-  color: #fff;
-}
-
-.event-text {
-  color: #ccc;
-  line-height: 1.6;
-}
-
-@media (min-width: 768px) {
-  .events .event-posts-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .events .event-posts-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Certification & Portfolio image cards same size */
-.project-img {
-  position: relative;
-  width: 100%;
-  height: 200px;   /* or any consistent height you like */
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.project-img img,
-.project-img video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 16px;
-}
-
-
-.certification-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.certification-list .project-item {
-  background: #2a2a2e;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.certification-list .project-item:hover {
-  transform: translateY(-5px);
-}
-
-.certification-list .project-img {
-  position: relative;
-  width: 100%;
-  height: 200px; /* ✅ Fixed height like your videos */
-  overflow: hidden;
-}
-
-.certification-list .project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.certification-list .project-title {
-  color: #fff;
-  font-size: 16px;
-  margin: 15px;
-  line-height: 1.4;
-}
-
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.project-item {
-  background: #2a2a2e;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.project-item:hover {
-  transform: translateY(-5px);
-}
-
-.project-img {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-.project-img img,
-.project-img video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-title,
-.project-category {
-  margin: 10px 15px;
-  color: #fff;
-}
-
-.project-category {
-  font-size: 14px;
-  color: #aaa;
-}
-
