@@ -1,4 +1,35 @@
+
+
 'use strict';
+
+// ✅ Sidebar toggle
+const elementToggleFunc = (elem) => elem.classList.toggle("active");
+
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+sidebarBtn.addEventListener("click", () => elementToggleFunc(sidebar));
+
+// ✅ Page navigation
+const navLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    const target = link.textContent.trim().toLowerCase();
+
+    navLinks.forEach(l => l.classList.remove("active"));
+    pages.forEach(p => {
+      if (p.dataset.page === target) {
+        p.classList.add("active");
+      } else {
+        p.classList.remove("active");
+      }
+    });
+
+    link.classList.add("active");
+    window.scrollTo(0, 0);
+  });
+});
 
 
 // ----------
