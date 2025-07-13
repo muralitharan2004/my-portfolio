@@ -1,22 +1,16 @@
 'use strict';
 
-// ----------
-// Sidebar toggle
-// ----------
+// ---------- Sidebar toggle ----------
 const elementToggleFunc = (elem) => elem.classList.toggle("active");
-
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", () => elementToggleFunc(sidebar));
 
-// ----------
-// Modal (testimonials)
-// ----------
+// ---------- Modal (testimonials) ----------
 const testimonialsItems = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
-
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
@@ -39,20 +33,18 @@ testimonialsItems.forEach(item => {
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
-// ----------
-// Custom select (portfolio filter)
-// ----------
+// ---------- Portfolio filter ----------
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-select-value]"); // NOTE: typo fixed!
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtns = document.querySelectorAll("[data-filter-btn]");
-const filterItems = document.querySelectorAll("[data-filter-item]");
+const filterItems = document.querySelectorAll(".project-item");
 
 select.addEventListener("click", () => elementToggleFunc(select));
 
 const filterFunc = (selectedValue) => {
   filterItems.forEach(item => {
-    if (selectedValue === "all" || selectedValue === item.dataset.category) {
+    if (selectedValue === "all" || selectedValue === item.dataset.category.toLowerCase()) {
       item.classList.add("active");
     } else {
       item.classList.remove("active");
@@ -76,20 +68,19 @@ filterBtns.forEach(btn => {
     const selectedValue = btn.innerText.toLowerCase();
     selectValue.innerText = btn.innerText;
     filterFunc(selectedValue);
-
     lastClickedBtn.classList.remove("active");
     btn.classList.add("active");
     lastClickedBtn = btn;
   });
 });
 
-// ----------
-// Contact form enable/disable
-// ----------
+// Show all by default
+filterFunc("all");
+
+// ---------- Contact form enable/disable ----------
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
-
 formInputs.forEach(input => {
   input.addEventListener("input", () => {
     if (form.checkValidity()) {
@@ -100,9 +91,7 @@ formInputs.forEach(input => {
   });
 });
 
-// ----------
-// Page navigation ✅ FIXED with index method
-// ----------
+// ---------- Page navigation ----------
 const navLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
@@ -115,9 +104,3 @@ navLinks.forEach((link, index) => {
     window.scrollTo(0, 0);
   });
 });
-
-
-});
-
-// ✅ Show all projects by default
-filterFunc("all");
