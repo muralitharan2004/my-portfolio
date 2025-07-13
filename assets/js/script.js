@@ -1,4 +1,4 @@
-'use strict';
+
 
 // ----------
 // Sidebar toggle
@@ -114,6 +114,3 @@ navLinks.forEach((link, index) => {
     pages[index].classList.add("active");
     window.scrollTo(0, 0);
   });
-
-  'use strict';
-
