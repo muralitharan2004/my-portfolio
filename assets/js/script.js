@@ -115,3 +115,52 @@ navLinks.forEach((link, index) => {
     window.scrollTo(0, 0);
   });
 });
+
+// Filter logic
+const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-select-value]");
+const filterBtns = document.querySelectorAll("[data-filter-btn]");
+const filterItems = document.querySelectorAll(".project-item");
+
+// Open select
+select.addEventListener("click", () => {
+  select.classList.toggle("active");
+});
+
+// Filter function
+const filterFunc = (selectedValue) => {
+  filterItems.forEach(item => {
+    if (selectedValue === "all" || selectedValue === item.dataset.category) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+};
+
+// Select dropdown
+selectItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const selectedValue = item.innerText.toLowerCase();
+    selectValue.innerText = item.innerText;
+    select.classList.remove("active");
+    filterFunc(selectedValue);
+  });
+});
+
+// Filter buttons
+let lastClickedBtn = filterBtns[0];
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const selectedValue = btn.innerText.toLowerCase();
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove("active");
+    btn.classList.add("active");
+    lastClickedBtn = btn;
+  });
+});
+
+// ✅ Show all projects by default
+filterFunc("all");
