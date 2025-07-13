@@ -621,118 +621,105 @@
       <!--
         - #PORTFOLIO
       -->
-<!-- ===========================
- ✅ Portfolio Section with Filter
-============================= -->
+<section class="projects">
 
-<article class="portfolio" data-page="portfolio">
+  <!-- ✅ Desktop Filter Buttons -->
+  <ul class="filter-list">
+    <li class="filter-item">
+      <button class="active" data-filter-btn data-filter="all">All</button>
+    </li>
+    <li class="filter-item">
+      <button data-filter-btn data-filter="uiux">UI/UX</button>
+    </li>
+    <li class="filter-item">
+      <button data-filter-btn data-filter="webdesign">Web Design</button>
+    </li>
+    <li class="filter-item">
+      <button data-filter-btn data-filter="aiml">AI/ML</button>
+    </li>
+  </ul>
 
-  <header>
-    <h2 class="h2 article-title">My Projects</h2>
-  </header>
+  <!-- ✅ Mobile Filter Dropdown -->
+  <div class="filter-select-box">
+    <button class="filter-select" data-select>
+      <div class="select-value" data-select-value>Select category</div>
+      <div class="select-icon">
+        <ion-icon name="chevron-down"></ion-icon>
+      </div>
+    </button>
 
-  <section class="projects">
-
-    <!-- ✅ Desktop Filter Buttons -->
-    <ul class="filter-list">
-      <li class="filter-item">
-        <button class="active" data-filter-btn data-filter="all">All</button>
+    <ul class="select-list">
+      <li class="select-item">
+        <button data-select-item data-filter="all">All</button>
       </li>
-      <li class="filter-item">
-        <button data-filter-btn data-filter="uiux">UI/UX</button>
+      <li class="select-item">
+        <button data-select-item data-filter="uiux">UI/UX</button>
       </li>
-      <li class="filter-item">
-        <button data-filter-btn data-filter="webdesign">Web Design</button>
+      <li class="select-item">
+        <button data-select-item data-filter="webdesign">Web Design</button>
       </li>
-      <li class="filter-item">
-        <button data-filter-btn data-filter="aiml">AI/ML</button>
+      <li class="select-item">
+        <button data-select-item data-filter="aiml">AI/ML</button>
       </li>
     </ul>
+  </div>
 
-    <!-- ✅ Mobile Filter Dropdown -->
-    <div class="filter-select-box">
-      <button class="filter-select" data-select>
-        <div class="select-value" data-select-value>Select category</div>
-        <div class="select-icon">
-          <ion-icon name="chevron-down"></ion-icon>
-        </div>
-      </button>
+  <!-- ✅ Project Grid -->
+  <ul class="project-list">
 
-      <ul class="select-list">
-        <li class="select-item">
-          <button data-select-item data-filter="all">All</button>
-        </li>
-        <li class="select-item">
-          <button data-select-item data-filter="uiux">UI/UX</button>
-        </li>
-        <li class="select-item">
-          <button data-select-item data-filter="webdesign">Web Design</button>
-        </li>
-        <li class="select-item">
-          <button data-select-item data-filter="aiml">AI/ML</button>
-        </li>
-      </ul>
-    </div>
+    <li class="project-item active" data-filter-item data-category="uiux">
+      <a href="#">
+        <figure class="project-img">
+          <video src="./assets/images/design1-apple.mp4" width="400" controls autoplay muted></video>
+        </figure>
+        <h3 class="project-title">Apple Store Design</h3>
+        <p class="project-category">UI/UX</p>
+      </a>
+    </li>
 
-    <!-- ✅ Project Grid -->
-    <ul class="project-list">
+    <li class="project-item active" data-filter-item data-category="uiux">
+      <a href="#">
+        <figure class="project-img">
+          <video src="./assets/images/kodaiparadise-bookdesign.mp4" width="400" controls autoplay muted></video>
+        </figure>
+        <h3 class="project-title">Kodai Paradise Stay Booking</h3>
+        <p class="project-category">UI/UX</p>
+      </a>
+    </li>
 
-      <li class="project-item" data-filter-item data-category="uiux">
-        <a href="#">
-          <figure class="project-img">
-            <video src="./assets/images/design1-apple.mp4" width="400" controls autoplay muted></video>
-          </figure>
-          <h3 class="project-title">Apple Store Design</h3>
-          <p class="project-category">UI/UX</p>
-        </a>
-      </li>
+    <li class="project-item active" data-filter-item data-category="uiux">
+      <a href="#">
+        <figure class="project-img">
+          <video src="./assets/images/freelancer-homepage.mp4" width="400" controls autoplay muted></video>
+        </figure>
+        <h3 class="project-title">Freelancer Inn</h3>
+        <p class="project-category">UI/UX</p>
+      </a>
+    </li>
 
-      <li class="project-item" data-filter-item data-category="uiux">
-        <a href="#">
-          <figure class="project-img">
-            <video src="./assets/images/kodaiparadise-bookdesign.mp4" width="400" controls autoplay muted></video>
-          </figure>
-          <h3 class="project-title">Kodai Paradise Stay Booking</h3>
-          <p class="project-category">UI/UX</p>
-        </a>
-      </li>
+    <li class="project-item active" data-filter-item data-category="webdesign">
+      <a href="#">
+        <figure class="project-img">
+          <img src="./assets/images/webdesign-example.jpg" alt="Web Design">
+        </figure>
+        <h3 class="project-title">Business Website</h3>
+        <p class="project-category">Web Design</p>
+      </a>
+    </li>
 
-      <li class="project-item" data-filter-item data-category="uiux">
-        <a href="#">
-          <figure class="project-img">
-            <video src="./assets/images/freelancer-homepage.mp4" width="400" controls autoplay muted></video>
-          </figure>
-          <h3 class="project-title">Freelancer Inn</h3>
-          <p class="project-category">UI/UX</p>
-        </a>
-      </li>
+    <li class="project-item active" data-filter-item data-category="aiml">
+      <a href="#">
+        <figure class="project-img">
+          <img src="./assets/images/aiml-project.jpg" alt="AI/ML Project">
+        </figure>
+        <h3 class="project-title">AI/ML Research Demo</h3>
+        <p class="project-category">AI/ML</p>
+      </a>
+    </li>
 
-      <li class="project-item" data-filter-item data-category="webdesign">
-        <a href="#">
-          <figure class="project-img">
-            <img src="./assets/images/webdesign-example.jpg" alt="Web Design">
-          </figure>
-          <h3 class="project-title">Business Website</h3>
-          <p class="project-category">Web Design</p>
-        </a>
-      </li>
+  </ul>
 
-      <li class="project-item" data-filter-item data-category="aiml">
-        <a href="#">
-          <figure class="project-img">
-            <img src="./assets/images/aiml-project.jpg" alt="AI/ML Project">
-          </figure>
-          <h3 class="project-title">AI/ML Research Demo</h3>
-          <p class="project-category">AI/ML</p>
-        </a>
-      </li>
-
-    </ul>
-
-  </section>
-
-</article>
-
+</section>
 
       <!--
         - #BLOG
