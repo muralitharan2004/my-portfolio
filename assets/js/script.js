@@ -1,3 +1,4 @@
+'use strict';
 
 
 // ----------
@@ -114,3 +115,4 @@ navLinks.forEach((link, index) => {
     pages[index].classList.add("active");
     window.scrollTo(0, 0);
   });
+
