@@ -631,23 +631,23 @@
 
   <section class="projects">
 
-    <!-- Filter buttons for desktop -->
+    <!-- ✅ Filter buttons for desktop -->
     <ul class="filter-list">
       <li class="filter-item">
-        <button class="active" data-filter-btn>All</button>
+        <button class="active" data-filter-btn data-filter="all">All</button>
       </li>
       <li class="filter-item">
-        <button data-filter-btn>UI/UX</button>
+        <button data-filter-btn data-filter="uiux">UI/UX</button>
       </li>
       <li class="filter-item">
-        <button data-filter-btn>Web Design</button>
+        <button data-filter-btn data-filter="webdesign">Web Design</button>
       </li>
       <li class="filter-item">
-        <button data-filter-btn>AI/ML</button>
+        <button data-filter-btn data-filter="aiml">AI/ML</button>
       </li>
     </ul>
 
-    <!-- Filter dropdown for mobile -->
+    <!-- ✅ Filter dropdown for mobile -->
     <div class="filter-select-box">
       <button class="filter-select" data-select>
         <div class="select-value" data-select-value>Select category</div>
@@ -658,21 +658,21 @@
 
       <ul class="select-list">
         <li class="select-item">
-          <button data-select-item>All</button>
+          <button data-select-item data-filter="all">All</button>
         </li>
         <li class="select-item">
-          <button data-select-item>UI/UX</button>
+          <button data-select-item data-filter="uiux">UI/UX</button>
         </li>
         <li class="select-item">
-          <button data-select-item>Web Design</button>
+          <button data-select-item data-filter="webdesign">Web Design</button>
         </li>
         <li class="select-item">
-          <button data-select-item>AI/ML</button>
+          <button data-select-item data-filter="aiml">AI/ML</button>
         </li>
       </ul>
     </div>
 
-    <!-- Projects Grid -->
+    <!-- ✅ Projects Grid -->
     <ul class="project-list">
 
       <li class="project-item active" data-filter-item data-category="uiux">
@@ -704,6 +704,16 @@
           <p class="project-category">UI/UX</p>
         </a>
       </li>
+
+      <!-- ✅ Example for other categories -->
+      <!--
+      <li class="project-item active" data-filter-item data-category="webdesign">
+        ...
+      </li>
+      <li class="project-item active" data-filter-item data-category="aiml">
+        ...
+      </li>
+      -->
 
     </ul>
 
