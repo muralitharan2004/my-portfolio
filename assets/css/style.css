@@ -1667,23 +1667,25 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: #fff;
 }
 
-/* ===========================
-   ✅ Events Section Card Style
-=========================== */
+/* =============================
+   ✅ EVENTS SECTION CARD GRID
+============================= */
 
 .event-posts-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem; /* space between cards */
-  padding: 0;
+  gap: 2rem;
   list-style: none;
+  padding: 0;
 }
 
 .event-post-item {
-  background-color: var(--eerie-black-2);
+  background: var(--eerie-black-2);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1693,14 +1695,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .event-banner-box img {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
 }
 
 .event-content {
-  padding: 1.2rem 1.5rem;
+  padding: 1.5rem;
 }
 
 .event-meta {
@@ -1708,7 +1710,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   align-items: center;
   font-size: 0.875rem;
   color: var(--light-gray);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .event-meta .dot {
@@ -1728,7 +1730,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .event-text {
-  color: var(--light-gray);
   font-size: 0.95rem;
+  color: var(--light-gray);
   line-height: 1.5;
 }
