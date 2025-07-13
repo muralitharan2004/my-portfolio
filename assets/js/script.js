@@ -104,3 +104,29 @@ navLinks.forEach((link, index) => {
     window.scrollTo(0, 0);
   });
 });
+
+// ✅ Navigation: match nav link to data-page
+const navLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    // Remove active classes
+    navLinks.forEach(l => l.classList.remove("active"));
+    pages.forEach(p => p.classList.remove("active"));
+
+    // Add active to clicked link
+    link.classList.add("active");
+
+    // Find page that matches link text
+    const target = link.textContent.trim().toLowerCase();
+    pages.forEach(p => {
+      if (p.dataset.page === target) {
+        p.classList.add("active");
+      }
+    });
+
+    window.scrollTo(0, 0);
+  });
+});
+
