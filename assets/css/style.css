@@ -1580,3 +1580,44 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .modal-avatar-box img { width: 80px; }
 
+/* =======================
+   ✅ Project List Grid 
+   ======================= */
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 column on mobile */
+  gap: 30px;
+}
+
+/* ✅ 2 columns for medium/large screens */
+@media (min-width: 768px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-item {
+  background: #1c1c1c; /* optional for contrast */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+}
+
+.project-img video,
+.project-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-title,
+.project-category {
+  padding: 10px 15px;
+  color: #fff;
+}
