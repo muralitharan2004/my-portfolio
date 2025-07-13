@@ -1,16 +1,50 @@
-'use strict';
+"use strict";
 
-// ---------- Sidebar toggle ----------
+/* ============================
+   Sidebar toggle
+============================ */
 const elementToggleFunc = (elem) => elem.classList.toggle("active");
+
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-sidebarBtn.addEventListener("click", () => elementToggleFunc(sidebar));
+if (sidebar && sidebarBtn) {
+  sidebarBtn.addEventListener("click", () => elementToggleFunc(sidebar));
+}
 
-// ---------- Modal (testimonials) ----------
+
+/* ============================
+   Page Navigation
+============================ */
+const navLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    const target = link.textContent.trim().toLowerCase();
+
+    navLinks.forEach(l => l.classList.remove("active"));
+    pages.forEach(p => {
+      if (p.dataset.page === target) {
+        p.classList.add("active");
+      } else {
+        p.classList.remove("active");
+      }
+    });
+
+    link.classList.add("active");
+    window.scrollTo(0, 0);
+  });
+});
+
+
+/* ============================
+   Testimonials Modal (optional)
+============================ */
 const testimonialsItems = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
+
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
@@ -30,21 +64,26 @@ testimonialsItems.forEach(item => {
   });
 });
 
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+if (modalCloseBtn) modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+if (overlay) overlay.addEventListener("click", testimonialsModalFunc);
 
-// ---------- Portfolio filter ----------
+
+/* ============================
+   Portfolio filter
+============================ */
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-select-value]");
 const filterBtns = document.querySelectorAll("[data-filter-btn]");
-const filterItems = document.querySelectorAll(".project-item");
+const filterItems = document.querySelectorAll("[data-filter-item]");
 
-select.addEventListener("click", () => elementToggleFunc(select));
+if (select) {
+  select.addEventListener("click", () => elementToggleFunc(select));
+}
 
 const filterFunc = (selectedValue) => {
   filterItems.forEach(item => {
-    if (selectedValue === "all" || selectedValue === item.dataset.category.toLowerCase()) {
+    if (selectedValue === "all" || selectedValue === item.dataset.category) {
       item.classList.add("active");
     } else {
       item.classList.remove("active");
@@ -52,81 +91,52 @@ const filterFunc = (selectedValue) => {
   });
 };
 
+// Mobile select dropdown items
 selectItems.forEach(item => {
   item.addEventListener("click", () => {
-    const selectedValue = item.innerText.toLowerCase();
+    const selectedValue = item.dataset.filter;
     selectValue.innerText = item.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
   });
 });
 
+// Desktop filter buttons
 let lastClickedBtn = filterBtns[0];
-
 filterBtns.forEach(btn => {
   btn.addEventListener("click", () => {
-    const selectedValue = btn.innerText.toLowerCase();
-    selectValue.innerText = btn.innerText;
+    const selectedValue = btn.dataset.filter;
+
     filterFunc(selectedValue);
+
     lastClickedBtn.classList.remove("active");
     btn.classList.add("active");
     lastClickedBtn = btn;
+
+    // Also update dropdown value
+    if (selectValue) selectValue.innerText = btn.innerText;
   });
 });
 
-// Show all by default
-filterFunc("all");
 
-// ---------- Contact form enable/disable ----------
+/* ============================
+   Contact form enable/disable
+============================ */
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
-formInputs.forEach(input => {
-  input.addEventListener("input", () => {
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-  });
-});
 
-// ---------- Page navigation ----------
-const navLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-navLinks.forEach((link, index) => {
-  link.addEventListener("click", () => {
-    navLinks.forEach(l => l.classList.remove("active"));
-    pages.forEach(p => p.classList.remove("active"));
-    link.classList.add("active");
-    pages[index].classList.add("active");
-    window.scrollTo(0, 0);
-  });
-});
-
-// ✅ Navigation: match nav link to data-page
-const navLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    // Remove active classes
-    navLinks.forEach(l => l.classList.remove("active"));
-    pages.forEach(p => p.classList.remove("active"));
-
-    // Add active to clicked link
-    link.classList.add("active");
-
-    // Find page that matches link text
-    const target = link.textContent.trim().toLowerCase();
-    pages.forEach(p => {
-      if (p.dataset.page === target) {
-        p.classList.add("active");
+if (form) {
+  formInputs.forEach(input => {
+    input.addEventListener("input", () => {
+      if (form.checkValidity()) {
+        formBtn.removeAttribute("disabled");
+      } else {
+        formBtn.setAttribute("disabled", "");
       }
     });
-
-    window.scrollTo(0, 0);
   });
-});
+}
 
+// ✅ Show all projects by default
+filterFunc("all");
