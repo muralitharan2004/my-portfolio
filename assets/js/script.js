@@ -44,9 +44,9 @@ overlay.addEventListener("click", testimonialsModalFunc);
 // ----------
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-select-value]"); // NOTE: typo fixed!
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtns = document.querySelectorAll("[data-filter-btn]");
-const filterItems = document.querySelectorAll("[data-filter-item]");
+const filterItems = document.querySelectorAll(".project-item");
 
 select.addEventListener("click", () => elementToggleFunc(select));
 
@@ -101,7 +101,7 @@ formInputs.forEach(input => {
 });
 
 // ----------
-// Page navigation ✅ FIXED with index method
+// Page navigation ✅
 // ----------
 const navLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
@@ -114,9 +114,6 @@ navLinks.forEach((link, index) => {
     pages[index].classList.add("active");
     window.scrollTo(0, 0);
   });
-});
-
-
 });
 
 // ✅ Show all projects by default
