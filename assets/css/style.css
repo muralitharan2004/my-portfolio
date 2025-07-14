@@ -1752,3 +1752,82 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-size: 15px;
   }
 }
+
+/* Container for the whole Events section */
+.events {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Event list */
+.event-posts-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each Event Card */
+.event-post-item {
+  background: #222; /* Or your card background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  flex: 1 1 300px; /* Card min width */
+  max-width: 100%;
+}
+
+/* Image */
+.event-banner-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Card content */
+.event-content {
+  padding: 1rem;
+}
+
+.event-meta {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background: #999;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.event-item-title {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+.event-text {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Responsive fix: 1 column on mobile */
+@media (max-width: 768px) {
+  .event-posts-list {
+    flex-direction: column;
+  }
+
+  .event-post-item {
+    flex: 1 1 100%;
+  }
+}
