@@ -1671,31 +1671,61 @@ textarea.form-input::-webkit-resizer { display: none; }
    ✅ EVENTS SECTION CARD GRID
 ============================= */
 /* ✅ Style each event/certification card */
+/* === Event Section === */
+
+.events {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.events header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.article-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff; /* Or your theme color */
+}
+
+/* === Event Posts Grid === */
+
 .event-posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
 }
+
+/* === Single Event Card === */
 
 .event-post-item {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-radius: 16px;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-post-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .event-banner-box img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
+  object-fit: cover;
 }
+
+/* === Content === */
 
 .event-content {
   padding: 20px;
@@ -1703,36 +1733,44 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .event-meta {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
   font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
+  color: #777;
+  margin-bottom: 8px;
 }
 
 .event-meta .dot {
-  height: 4px;
-  width: 4px;
-  background-color: #555;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #777;
   border-radius: 50%;
   margin: 0 8px;
 }
 
 .event-item-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
+  color: #222;
 }
 
 .event-text {
   font-size: 16px;
-  color: #333;
-  line-height: 1.5;
+  color: #444;
+  line-height: 1.6;
 }
 
-@media (max-width: 600px) {
+/* === Responsive tweaks === */
+
+@media (max-width: 768px) {
+  .article-title {
+    font-size: 28px;
+  }
+
   .event-item-title {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .event-text {
