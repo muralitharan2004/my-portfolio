@@ -1875,3 +1875,42 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 1rem;
   }
 }
+
+.contact-links {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-links li {
+  margin: 0.5rem 0;
+}
+
+.contact-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+}
+
+.contact-links a:hover {
+  color: #f0c040; /* your accent color */
+}
+
+.contact-links i {
+  font-size: 1.2rem;
+}
+
+.contact-links .copyright {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
