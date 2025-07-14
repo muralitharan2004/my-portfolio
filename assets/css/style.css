@@ -1914,13 +1914,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: #aaa;
 }
 
-.contact-links-box {
-  background: #1c1c1c;
-  border-radius: 1rem;
-  padding: 2rem;
-  margin-top: 2rem;
-  text-align: center;
-}
 
 .contact-links {
   list-style: none;
