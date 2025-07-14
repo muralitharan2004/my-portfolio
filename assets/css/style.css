@@ -1670,146 +1670,62 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* =============================
    ✅ EVENTS SECTION CARD GRID
 ============================= */
-
-.event-posts-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-}
-
+/* ✅ Style each event/certification card */
 .event-post-item {
-  background: var(--eerie-black-2);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 400px;
 }
 
-.event-post-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
+/* ✅ Make the image fill the card */
 .event-banner-box img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
 }
 
+/* ✅ Content area below the image */
 .event-content {
-  padding: 1.5rem;
+  padding: 20px;
 }
 
 .event-meta {
   display: flex;
   align-items: center;
-  font-size: 0.875rem;
-  color: var(--light-gray);
-  margin-bottom: 0.5rem;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
 }
 
 .event-meta .dot {
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  background: var(--white-2);
+  height: 4px;
+  width: 4px;
+  background-color: #555;
   border-radius: 50%;
   margin: 0 8px;
 }
 
 .event-item-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--white-2);
-  margin-bottom: 0.5rem;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px;
 }
 
 .event-text {
-  font-size: 0.95rem;
-  color: var(--light-gray);
-  line-height: 1.5;
-}
-
-/* Grid container for events */
-.event-posts-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/* Individual event block */
-.event-post-item {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.event-post-item:hover {
-  transform: translateY(-5px);
-}
-
-/* Image styling */
-.event-banner-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Content styling */
-.event-content {
-  padding: 1rem;
-  text-align: left;
-}
-
-/* Meta info */
-.event-meta {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  color: #666;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.event-category {
-  font-weight: 600;
-  color: #0077cc;
-}
-
-.event-item-title {
-  font-size: 1.3rem;
-  margin: 0.5rem 0;
+  font-size: 16px;
   color: #333;
-}
-
-.event-text {
-  font-size: 1rem;
   line-height: 1.5;
-  color: #444;
 }
 
-/* 🔧 Mobile-friendly adjustments */
-@media screen and (max-width: 768px) {
-  .event-content {
-    text-align: center;
-  }
-
-  .event-meta {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .event-item-title {
-    font-size: 1.2rem;
+/* ✅ Make sure it's responsive */
+@media (max-width: 600px) {
+  .event-post-item {
+    max-width: 90%;
   }
 }
+
