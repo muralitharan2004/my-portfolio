@@ -1671,6 +1671,15 @@ textarea.form-input::-webkit-resizer { display: none; }
    ✅ EVENTS SECTION CARD GRID
 ============================= */
 /* ✅ Style each event/certification card */
+.event-posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
 .event-post-item {
   display: flex;
   flex-direction: column;
@@ -1678,24 +1687,23 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: 20px auto;
-  max-width: 400px;
+  width: 100%;
+  height: 100%;
 }
 
-/* ✅ Make the image fill the card */
 .event-banner-box img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* ✅ Content area below the image */
 .event-content {
   padding: 20px;
 }
 
 .event-meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 14px;
   color: #555;
@@ -1722,10 +1730,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   line-height: 1.5;
 }
 
-/* ✅ Make sure it's responsive */
 @media (max-width: 600px) {
-  .event-post-item {
-    max-width: 90%;
+  .event-item-title {
+    font-size: 18px;
+  }
+
+  .event-text {
+    font-size: 15px;
   }
 }
-
