@@ -1814,3 +1814,76 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: var(--light-gray);
   line-height: 1.5;
 }
+
+/* Base styling for event section */
+.events {
+  padding: 2rem 1rem;
+}
+
+.event-posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 2rem;
+}
+
+/* Individual event item */
+.event-post-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.event-banner-box img {
+  width: 380px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.event-content {
+  flex: 1;
+}
+
+/* Event metadata layout */
+.event-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.event-category {
+  font-weight: bold;
+}
+
+/* Headings and text */
+.event-item-title {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.event-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 🔧 Responsive tweaks for mobile */
+@media screen and (max-width: 768px) {
+  .event-post-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .event-banner-box img {
+    width: 100%;
+  }
+
+  .event-meta {
+    justify-content: center;
+  }
+}
