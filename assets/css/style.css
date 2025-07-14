@@ -1958,3 +1958,50 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-size: 0.9rem;
   color: #999;
 }
+
+.contact-links-box {
+  background: #222; /* Dark card */
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-links li {
+  margin: 0.75rem 0;
+}
+
+.contact-links a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: #00bfff; /* Fresh blue accent */
+  transform: translateX(4px);
+}
+
+.contact-links i {
+  font-size: 1.2rem;
+}
+
+/* Footer style */
+.site-footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
