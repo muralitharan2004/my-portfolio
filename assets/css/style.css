@@ -390,7 +390,7 @@ main {
 }
 
 .contact-item {
-  min-width: 100%;
+  min-width:40px ;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -1835,7 +1835,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .contact-list {
   display: flex;
-  gap: 5px; /* space between icons */
+  gap: 10px; /* space between icons */
   list-style: none;
   padding: 0;
 }
