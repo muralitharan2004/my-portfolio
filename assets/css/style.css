@@ -1833,201 +1833,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 
-.contact-links {
-  background: #111;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.contact-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.contact-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.contact-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.contact-links li a:hover {
-  color: #00bfff;
-}
-
-.contact-links i {
-  font-size: 1.2rem;
-}
-
-/* Responsive: stack vertically on small screens */
-@media (max-width: 600px) {
-  .contact-links ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-}
-
-.contact-links {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.contact-links ul {
+  gap: 20px; /* space between icons */
   list-style: none;
   padding: 0;
 }
 
-.contact-links li {
-  margin: 0.5rem 0;
-}
-
-.contact-links a {
-  color: #ddd;
+.contact-item a {
+  color: #fff; /* or your preferred color */
   text-decoration: none;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.3s;
 }
 
-.contact-links a:hover {
-  color: #f0c040; /* your accent color */
+.contact-item ion-icon {
+  font-size: 28px; /* icon size */
+  transition: transform 0.3s ease;
 }
 
-.contact-links i {
-  font-size: 1.2rem;
-}
-
-.contact-links .copyright {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-
-.contact-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-links li {
-  margin: 0.5rem 0;
-}
-
-.contact-links a {
-  color: #ddd;
-  text-decoration: none;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.3s;
-}
-
-.contact-links a:hover {
-  color: #f0c040; /* your accent */
-}
-
-.contact-links i {
-  font-size: 1.2rem;
-}
-
-/* Footer styles */
-.site-footer {
-  text-align: center;
-  margin-top: 3rem;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #999;
-}
-
-.contact-links-box {
-  background: #222; /* Dark card */
-  border-radius: 16px;
-  padding: 2rem;
-  margin-top: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.contact-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-links li {
-  margin: 0.75rem 0;
-}
-
-.contact-links a {
-  color: #eee;
-  text-decoration: none;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.contact-links a:hover {
-  color: #00bfff; /* Fresh blue accent */
-  transform: translateX(4px);
-}
-
-.contact-links i {
-  font-size: 1.2rem;
-}
-
-/* Footer style */
-.site-footer {
-  text-align: center;
-  margin-top: 4rem;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  color: #aaa;
-  border-top: 1px solid #333;
-}
-
-.contact-card {
-  display: flex;
-  flex-direction: column;
-  background: #121212;
-  color: #ffffff;
-  padding: 1rem;
-  border-radius: 8px;
-  width: 300px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin: 0.5rem 0;
-}
-
-.contact-item i {
-  font-size: 1.2rem;
-  margin-right: 0.75rem;
-  color: #00bfff; /* Accent color */
-}
-
-.contact-item a, 
-.contact-item span {
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: inherit;
-}
-
-.contact-item a:hover {
-  color: #1DA1F2;
+.contact-item ion-icon:hover {
+  transform: scale(1.2);
+  color: #1da1f2; /* hover color */
 }
