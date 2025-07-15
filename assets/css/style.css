@@ -1998,3 +1998,36 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: #aaa;
   border-top: 1px solid #333;
 }
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  background: #121212;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  margin-right: 0.75rem;
+  color: #00bfff; /* Accent color */
+}
+
+.contact-item a, 
+.contact-item span {
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-item a:hover {
+  color: #1DA1F2;
+}
